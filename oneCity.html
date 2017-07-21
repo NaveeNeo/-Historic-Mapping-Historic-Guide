@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<html >
+<head>
+<title>History of A City</title>
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><span class="fa fa-map-marker"></span><a href="#">Historic Mapping</a></h1>
+		</div>
+		</div>
+	</div>
+</div>
+<div id="header-featured">
+	<div id="banner-wrapper">
+		<div id="banner" class="container">
+			<h2><script>document.writeln(localStorage.getItem('IndexNo2'))</script></h2>
+			<p id="info"> </p>
+			<p> </p>
+			<script>
+				var x=localStorage.getItem('IndexNo1');
+				x=parseInt(x);
+				/*var history = ["Kozhikode or Calicut was the capital of Malabar during the time of sri Samoothiri Maharajas, who ruled the region before the British took over. The city's first recorded contact with Europe was when Vasco da Gama landed at Kappad (18 km north) in May 1498, as the leaders of a trade mission from Portugal. He was received by his highness Sri Samoothiri Maharaja himself",
+				"Madurai, came under the rule of the Kalabhra dynasty, which was ousted by the Pandyas around 590 CE.[26][27] The Pandyas were outsted from Madurai by the Chola dynasty during the early 9th century.[28] The city remained under the control of the Cholas until the early 13th century, when the second Pandyan empire was established with Madurai as its capital",
+				"The Mysore Kingdom, governed by the Wodeyar family, initially served as a vassal state of the Vijayanagara Empire. With the decline of the Vijayanagara Empire after the Battle of Talikota in 1565, the Mysore Kingdom gradually achieved independence,and by the time of King Narasaraja Wodeyar (1637) it had become a sovereign state.",
+				"The earliest references to Kanchipuram are found in the books of the Sanskrit grammarian Patanjali, who lived between the 3rd and 2nd centuries BCE.[14] The city is believed to have been part of the mythical Dravida Kingdom of the Mahabharatha,[14] and was described as \"the best among cities\" (Sanskrit: Nagareshu Kanchi) by the 4th-century Sanskrit poet, Kalidasa.[15] The city was regarded as the \"Banaras of the South\" "
+				];*/
+				/*var history = ["abc","123"];
+				document.write( history[1].toString());
+				var ans = history[1].toString();
+				alert(ans);*/
+				//y.innerHTML= "hi" +history[x] +"hello";
+				var y=document.getElementById("info");
+				
+				
+				switch(x)
+				{
+					case 0:y.innerHTML="Kozhikode or Calicut was the capital of Malabar during the time of sri Samoothiri Maharajas, who ruled the region before the British took over. The city's first recorded contact with Europe was when Vasco da Gama landed at Kappad (18 km north) in May 1498, as the leaders of a trade mission from Portugal. He was received by his highness Sri Samoothiri Maharaja himself";
+							break;
+					case 1:y.innerHTML="Madurai, came under the rule of the Kalabhra dynasty, which was ousted by the Pandyas around 590 CE.[26][27] The Pandyas were outsted from Madurai by the Chola dynasty during the early 9th century.[28] The city remained under the control of the Cholas until the early 13th century, when the second Pandyan empire was established with Madurai as its capital";
+							break;
+					case 2:y.innerHTML="The Mysore Kingdom, governed by the Wodeyar family, initially served as a vassal state of the Vijayanagara Empire. With the decline of the Vijayanagara Empire after the Battle of Talikota in 1565, the Mysore Kingdom gradually achieved independence,and by the time of King Narasaraja Wodeyar (1637) it had become a sovereign state.";
+							break;
+					case 3:y.innerHTML="The earliest references to Kanchipuram are found in the books of the Sanskrit grammarian Patanjali, who lived between the 3rd and 2nd centuries BCE.[14] The city is believed to have been part of the mythical Dravida Kingdom of the Mahabharatha,[14] and was described as \"the best among cities\" (Sanskrit: Nagareshu Kanchi) by the 4th-century Sanskrit poet, Kalidasa.[15] The city was regarded as the \"Banaras of the South\" ";
+							break;
+					case 4:y.innerHTML="Madras-Stone age implements have been found near Pallavaram in Chennai. According to the Archaeological Survey of India (ASI), Pallavaram was a megalithic cultural establishment, and pre-historic communities resided in the settlement.";
+							break;
+					case 5:y.innerHTML="Machalipatnam-The town has existed since the 3rd century BCE (Satavahana period) when, according to Ptolemy, it was known as Maisolos. The Periplus of the Erythraean Sea calls it Masalia in the 1st century BCE.[8] The port is located on the southeastern, or Coromandel Coast, of India. Situated in the mouth of the River Krishna on the Bay of Bengal, the Masula port saw flourishing sea trade. Muslin clothes were traded by ancient Greeks from the town and the word muslin originated from the name Maisolos.";
+							break;
+					case 6:y.innerHTML="Hampi-The emperor Ashoka's minor rock edicts in Nittur & Udegolan (both in Bellary district) lead one to believe that this region was within the Ashokan kingdom during the 3rd century BC. A Brahmi inscription & a terracotta seal dating to the 2nd century CE were also discovered from the excavation site.";
+							break;
+					case 7:y.innerHTML="Badami / Vatapi-The Puranic story says the wicked asura Vatapi was killed by sage Agastya (as per Agastya-Vatapi story), the area in which the incident happened so named as Vatapi. At Aihole there was a merchant guild known as Ayyavole Ainuravaru lived in the area have reformed. As per scholar Dr. D. P. Dikshit, the first Chalukya king was Jayasimha (a feudatory lord in the Kadamba dynasty), who in 500 AD established the Chalukya kingdom. His grandson Pulakeshin Ibuilt a fort at Vatapi.The first historical settlements in Hampi date back to 1 CE.";
+							break;
+					case 8:y.innerHTML="Mumbai is built on what was once an archipelago of seven islands: Bombay Island, Parel, Mazagaon, Mahim, Colaba, Worli, and Old Woman's Island (also known as Little Colaba).[52] It is not exactly known when these islands were first inhabited. Pleistocene sediments found along the coastal areas around Kandivali in northern Mumbai suggest that the islands were inhabited since the Stone Age.";
+							break;
+					case 9:y.innerHTML="Lothal-Before the arrival of Harappan people (c. 3000 BCE), Lothal was a small village next to the river providing access to the mainland from the Gulf of Khambhat. The indigenous people maintained a prosperous economy, attested by the discovery of copper objects, beads and semi-precious stones. Ceramic wares were of fine clay and smooth, micaceous red surface."
+							break;
+					case 10:y.innerHTML="Ujjain, also known historically as Ujjaiyini and Avanti, emerged as the first major centre in the Malwa region during India's second wave of urbanisation in the 7th century BC (the first wave was the Indus Valley Civilization). Around 600 BC an earthen rampart was built around Ujjain, enclosing a city of considerable size. Avanti was one of the prominent mahajanapadas of ancient India.";
+							break;
+					case 11:y.innerHTML="Jodhpur was also part of the Gurjara–Pratihara Empire and until 1100 CE was ruled by a powerful Gurjar King. Jodhpur was founded in 1459 by Rao Jodha, a Rajput chief of the Rathore clan. Jodha succeeded in conquering the surrounding territory and thus founded a state which came to be known as Marwar. As Jodha hailed from the nearby town of Mandore, that town initially served as the capital of this state; however, Jodhpur soon took over that role, even during the lifetime of Jodha. The city was located on the strategic road linking Delhi to Gujarat. This enabled it to profit from a flourishing trade in opium, copper, silk, sandals, date palms and coffee.Jodhpur was also part of the Gurjara–Pratihara Empire and until 1100 CE was ruled by a powerful Gurjar King. Jodhpur was founded in 1459 by Rao Jodha, a Rajput chief of the Rathore clan. Jodha succeeded in conquering the surrounding territory and thus founded a state which came to be known as Marwar. As Jodha hailed from the nearby town of Mandore, that town initially served as the capital of this state; however, Jodhpur soon took over that role, even during the lifetime of Jodha. The city was located on the strategic road linking Delhi to Gujarat. This enabled it to profit from a flourishing trade in opium, copper, silk, sandals, date palms and coffee.";
+							break;
+					case 12:y.innerHTML="Bhubaneswar's first mention was during the Kalinga War, which took place near Dhauli (now in the south of the city) in the 3rd century BCE. Later Emperor Kharavela established his capital at Sisupalgarh, on the outskirts of the modern city. The Hathigumpha inscriptions at the Udayagiri and Khandagiri Caves by Kharavela give a good account of that period, which is estimated as 1st–2nd century BCE. Temples built throughout the ancient and medieval periods chronicle the city's history. Bhubaneswar is famous for its heritage culture around the world.";
+							break;
+					case 13:y.innerHTML="Palashi / Plassey achieved historical significance when, on 23 June 1757, the Battle of Plassey was fought between the forces of Siraj Ud Daulah, the last Nawab of Bengal (and his French support troops) and the troops of the British East India Company, led by Robert Clive. This event, part of the Seven Years' War, ultimately led to the establishment of British rule in Bengal, and eventually, the whole Indian subcontinent. During British rule Plassey became part of Nadia District of Bengal.";
+							break;
+					case 14:y.innerHTML="Pataliputra-Its central location in north central India led rulers of successive dynasties to base their administrative capital here, from the Nandas, Mauryans, Shungas and the Guptas down to the Palas.[11] Situated at the confluence of the Ganges, Gandhaka and Son rivers, Pataliputra formed a \"water fort, or jaldurga\".[12] Its position helped it dominate the riverine trade of the Indo-Gangetic plains during Magadha's early imperial period. It was a great centre of trade and commerce and attracted merchants and intellectuals, such as the famed Chanakya, from all over India. Two important early Buddhist councils are recorded in early Buddhist texts as being held here, the First Buddhist council immediately following the death of the Buddha and the Second Buddhist council in the reign of Ashoka. Jain and Brahmanical sources identify Udayabhadra, son of Ajatashatru, as the king who first established Pataliputra as the capital of Magadha.";
+							break;
+					case 15:y.innerHTML="Mathura has an ancient history and also homeland and birth place of Krishna who was born in ahir/yadav family. According to the Archaeological Survey of India plaque at the Mathura Museum, the city is mentioned in the oldest Indian epic, the Ramayana. In the epic, the Ikshwaku prince Shatrughna slays a demon called Lavanasura and claims the land. Afterwards, the place came to be known as Madhuvan as it was thickly wooded, then Madhupura and later Mathura.[citation needed] In the 6th century BCE Mathura became the capital of the Surasena mahajanapada.[1] The city was later ruled by the Maurya empire (4th to 2nd centuries BCE) and the Shunga dynasty (2nd century BCE). It may have come under the control of Indo-Greeks some time between 180 BCE and 100 BCE. It then reverted to local rule before being conquered by the Indo-Scythians during the 1st century BCE.";
+							break;
+					case 16:y.innerHTML="According to the legend, Panipat was one of the five cities (prasthas) founded by the Pandava brothers during the times of the Mahabharata; its historic name being Panduprastha. Panipat was the scene of three pivotal battles in the Indian history. Panipat is first recorded in the Mahabharata as one of the five villages that the Pandavas demanded from Duryodhana. The five villages are the \"panch pat\". Padavaprastha (Now known as Panipat). Sonaprastha (Now known as Sonipat). Indraprastha (Now known as Delhi). Bahakprastha (Now known as Baghpat). Tilprastha (Now known as Tilpat). The First Battle of Panipat was fought on 21 April 1526 between Ibrahim Lodhi, the Afghan Sultan of Delhi, and the Turco-Mongol warlord Babur, who later established Mughal rule in Northern Indian subcontinent. Babur's force defeated Ibrahim's much larger force of over one lakh (one hundred thousand) soldiers. This First battle of Panipat thus ended the 'Lodi Rule' established by Bahlul Lodhi in Delhi.";
+							break;
+					case 17:y.innerHTML="Taxila or Takshashila (IAST: Takṣaśilā meaning \"City of Cut Stone\" or \"Takṣa Rock\") is a town and an important archaeological site in Rawalpindi District of Punjab, Pakistan. Taxila is situated about 32 km (20 mi) north-west of Islamabad and Rawalpindi, just off the famous Grand Trunk Road. The town lies 549 metres (1,801 ft) above sea level. It is the headquarters of the Taxila Tehsil in Rawalpindi district. Ancient Taxila was situated at the pivotal junction of South Asia and Central Asia. Some of the earliest ruins in this area date to the time of the Achaemenid Empire in the 6th century BCE.";
+							break;
+					
+					default :break;
+				}
+				
+			</script>
+			<a href="Main.html" class="button">Go back to main page</a>
+			<a href="Option1.html" class="button">go to map again </a>
+		</div>
+	</div>
+</div>
+<div id="copyright" class="container">
+	<p>&copy;Historic Mapping, All rights reserved. | Developed By: *B.R.Naveen *Chandan Balaji *Ajay S  |  </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<html >
+<head>
+<title>History of Two Cities</title>
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><span class="fa fa-map-marker"></span><a href="#">Historic Mapping</a></h1>
+		</div>
+		</div>
+	</div>
+</div>
+<div id="header-featured">
+	<div id="banner-wrapper">
+		<div id="banner" class="container">
+			<h2><script>document.writeln(localStorage.getItem('IndexNo4')+"  and  " +localStorage.getItem('IndexNo6'))</script></h2>
+			<p id="info"> </p>
+			<p> </p>
+			<script>
+				var x=localStorage.getItem('IndexNo3');
+				var y=localStorage.getItem('IndexNo5');
+				x=parseInt(x);
+				y=parseInt(y);
+				var disp=document.getElementById("info");
+				
+				var AdjList = [[1,9],[0,2,3],[1,3,4,7],[1,2,4,7],[2,3],[6],[5],[2,3],[],[0,11],[],[9,16],[13],[12],[],[17],[11],[15]];
+				//alert(AdjList[16][0]);
+				
+				
+				//Initialise Adjacency Matrix:
+				var AMatrix=new Array(18);
+				
+				for (i=0;i<18;i++) 
+				{
+					AMatrix[i]=new Array(18);
+				}
+				
+				for (i=0;i<18;i++) 
+				{
+				for (j=0;j<18;j++) 
+					AMatrix[i][j]=0;
+				}
+				
+				
+				//Generate Adjacency Matrix:
+				for (i=0;i<18;i++) 
+				{
+				for (j=0;j<AdjList[i].length;j++)
+						AMatrix[i][AdjList[i][j]]=1;
+				}
+				
+				//Obtaining the relation between cities.
+				var Cinfo=new Array(18);
+				
+				for (i=0;i<18;i++) 
+				{
+					Cinfo[i]=new Array(18);
+				}
+				//filling up the info
+				Cinfo[0][1]="A Public Works Department was initiated by Lord Dalhousie in 1852 and subsequently in 1855 an East coast canal was constructed for the purpose of easy navigation.[174] Roadways were handled by the Public Works Secretariat which was under the control of the member of the Governor's Executive Council. The principal highways of the Presidency were the Madras-Calcutta road, the Madras-Travancore road and the Madras-Calicut road.[175] By 1946–47, the Madras Presidency had 26,201 miles (42,166 km) of metalled roads and 14,406 miles (23,184 km) of unmetalled roads, and 1,403 miles (2,258 km) of navigable canals";
+				Cinfo[0][9]="A coastal route existed linking sites such as Lothal and Dholavira to Sutkagan  and Calicut Dor on the Makran coast.Vasco Di Gama used the way between these two cities in early journies." ;
+				Cinfo[1][2]="Rani Mangammal(1689—1704)was a queen regent on behalf of her grandson, in the Madurai Nayak kingdom in present day Madurai. War with Mysore:When Rani Mangammal was engaged in settling her policy towards the Mughal Empire, Chikka Deva Raya of Mysore in a pursuit of territorial expansion annexed the territories up to Salem and Coimbatore from Madurai Kingdom between 1690 and 1694. In 1695, Tiruchirapalli, then capital of Madurai, was also besieged by Mysore armies was defeated and sent back.";
+				Cinfo[1][3]="The cities remained with the Pandyas until 1311 when the Sambuvarayars declared independence, taking advantage of the anarchy caused by Malik Kafur's invasion.After short spells of occupation by Ravivarman Kulasekhara of Venad (Quilon, Kerala) in 1313–1314 and the Kakatiya ruler Prataparudra II, Kanchipuram was conquered by the Vijayanagar general Kumara Kampana, who defeated the Madurai Sultanate in 1361.";
+				Cinfo[2][3]="Kanchipuram was a battlefront for the British East India Company in the Carnatic Wars against the French East India Company and in the Anglo-Mysore Wars with the Sultanate of Mysore.[35]The popular 1780 Battle of Pollilur of the Second Anglo-Mysore War, known for the use of rockets by Hyder Ali of Mysore, was fought in the village of Pullalur near Kanchipuram.[36] In 1763, the British East India Company assumed indirect control from the Nawab of the Carnatic over the erstwhile Chingleput District, comprising the present-day Kanchipuram and Tiruvallur districts, in order to defray the expenses of the Carnatic wars. The Company brought the territory under their direct control during the Second Anglo-Mysore War, and the Collectorate of Chingleput was created in 1794. The district was split into two in 1997 and Kanchipuram made the capital of the newly created Kanchipuram district.";
+				Cinfo[2][4]="The first Anglo-Mysore War(1767–69) began with an invasion of Mysore by the troops of the company and its protege Nawab of Karnata. The Mysore army was led by their ruler, Haidar Ali, who successfully took the English army from the rear. By the peace treaty of Madras (1769) both parties renounced the territories they had conquered from each other and concluded a defensive alliance.In the second Anglo-Mysore War (1780–84), Mysore was allied with Hyderabad and the Maratha. From 1782, after the death of Haidar Ali, the Mysore army was led by his son, Tipu Sultan. The successes of Tipu Sultan, who had been aided by the French, came to nothing because of the betrayal of his allies and the conclusion of the Treaty of Versailles (1783) between England and France. By the peace treaty of Mangalore, the enemies returned the lands and prisoners they had captured./nIn the third Anglo-Mysore War (1790–92), the English succeeded in drawing the troops of the Maratha and of Hyderabad into the battle against Mysore. However, the situation of the British troops was so serious that in 1791 Governor-General Cornwallis came from Bengali to lead them. He managed to mobilize all the English forces and move them on Seringapatam, the capital of Mysore. Tipu Sultan was forced to sign the Seringapatam peace treaty of 1792 and surrender almost half his principality to the allies as well as paying an indemnity. In the fourth Anglo-Mysore War (1799), Seringapatam was taken by storm and Tipu Sultan killed. Mysore was turned into a vassal principality of the company.";
+				Cinfo[2][7]="The Chalukya dynasty ([tʃaːɭukjə]) was an Indian royal dynasty that ruled large parts of southern and central India between the 6th and the 12th centuries. During this period, they ruled as three related yet individual dynasties. The earliest dynasty, known as the \"Badami Chalukyas\", ruled from Vatapi (modern Badami) from the middle of the 6th century. Mysore-Vatapi war in 6th Century";
+				Cinfo[3][4]="Chennai, originally known as \"Madraspatnam\" was located in the province of Tondaimandalam, an area lying between Pennar river of Nellore and the Pennar river of Cuddalore. The capital of the province was Kancheepuram. Tondaimandalam was ruled in the 2nd century by Tondaiman Ilam Tiraiyan, who was a representative of the Chola family at Kanchipuram. It is believed that Ilam Tiraiyan must have subdued the Kurumbas, the original inhabitants of the region and established his rule over Tondaimandalam. ";
+				Cinfo[3][7]="The Battle of Vatapi was a decisive engagement which took place between the Pallavas and Chalukyas near the Chalukya capital of Vatapi (present day Badami) in 642. The battle resulted in the defeat and death of the Chalukya king Pulakesin II and the commencement of Pallava occupation of Vatapi which lasted until 654.In about 617–18, Pulakesin II invaded the Pallava kingdom defeating the king Mahendravarman I and proceeded as far south as the Cauvery River on the northern frontier of the Chola country.The Pallavas long wished to avenge the humiliation suffered at the hands of Pulakesin II and over the next few years, strengthened their forces in preparation for a counter-attack.";
+				Cinfo[5][6]="The Battle of Talikota (Kannada: ತಾಳೀಕೋಟೆಯ ಯುದ್ಧ, Telugu: తళ్ళికోట యుద్ధము) (26 January 1565), a watershed battle fought between the Vijayanagara Empire and the Deccan sultanates from Machalipatnam, resulted in a defeat of Vijayanagara, and ended in greatly weakening one of the greatest Indian Empires originating from the South before the Marathas. Talikota is situated in northern Karnataka, about 80 km to the southeast from the city of Bijapur.";
+				Cinfo[9][11]="In between 1540 to 1556, Afghans were in control of most of North India. Rajasthan born Hemu who started his career as a supplier of various types of merchandise to Sher Shah Suri empire, held various positions in capital Delhi as 'Incharge of Food Affairs', 'Minister of Internal Security', 'Prime Minister-cum-Chief of Army' with Islam Shah Suri and Adil Shah, who ruled north India from Punjab to Bengal .These were  the main  barter system cities in this era.";
+				Cinfo[11][16]="The First Battle of Panipat (21 April 1526), (Location	Panipat, Punjab region)(Mughal Empire(capital - Jodhpur) -- Lodi Empire(Capital Delhi)) between the Mughal Babur and the Delhi Sultan Ibrahim Lodi, resulting in a Mughal victory.The Second Battle of Panipat ( November 5, 1556),(Location	Panipat, Punjab region)(Mughal Empire(Jodhpur) -- Hemu Empire((Capital) ) between the Mughal Akbar and Hemu - the Hindu ruler of north India from Delhi, resulting in a Mughal victory.The Third Battle of Panipat (14 January 1761), (Location	Panipat, Punjab region)(Durrani Empire(Capital	Kandahar(1747–1776)Kabul(1776–1823)";
+				Cinfo[12][13]="British rule in India is conventionally described as having begun in 1757. On June 23rd of that year, at the Battle of Plassey, a small village and mango grove between Calcutta and Murshidabad, the forces of the East India Company under Robert Clive defeated the army of Siraj-ud-daulah, the Nawab of Bengal. The \"battle\" lasted no more than a few hours, and indeed the outcome of the battle had been decided long before the soldiers came to the battlefield.  The Navab later shifted his capital to Bhubaneshwar to escape from British.";
+				Cinfo[15][17]="When the Indo-Greeks settled in the area of Taxila, large Buddhist structures were already present, such as the stupa of Mathura built by Ashoka in the 3rd century BCE. These structures were reinforced in the following centuries, by building rings of smaller stupas and constructions around the original ones. Numerous coins of the Indo-Greek king Zoilos II were found under the foundation of a 1st-century BCE rectangular chapel near the Dharmarajika stupa. ";
+				
+				
+				if(AMatrix[x][y]==0)
+					disp.innerHTML="Sorry!! No relation exist Between these two cities in the past!! :)! Please try again with different Pairs..!" ;
+				else
+				{
+				if(x>y)
+					{
+					x=x+y;
+					y=x-y;
+					x=x-y;
+					}
+					
+					disp.innerHTML=Cinfo[x][y];
+				
+				}
+				
+				
+				
+				
+				
+				//alert(AMatrix[9][11]);
+				
+				
+				//alert(AMatrix[0][1]);
+			</script>
+			<a href="Main.html" class="button">Go back to main page</a>
+			<a href="Option2.html" class="button">go to map again </a>
+		</div>
+	</div>
+</div>
+<div id="copyright" class="container">
+	<p>&copy;Historic Mapping, All rights reserved. | Developed By: *B.R.Naveen *Chandan Balaji *Ajay S  | </p>
+</div>
+</body>
+</html>

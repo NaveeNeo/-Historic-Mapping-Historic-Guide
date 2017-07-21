@@ -1,0 +1,308 @@
+<html>
+	<head>
+		<title>Option1</title>
+		<style>
+		canvas#myCanvas {
+			position: absolute;
+			left: 300px;
+			top: 50px;
+		}
+		</style>
+	</head>
+
+	<body bgcolor="lightblue">
+		<p align="center">Historic Mapping:</p>
+		<br>
+		<h1 id="city" style="padding-left: 30px;">City</h1>
+		<canvas id="myCanvas"width="800px" height="700px" style="border: 5px solid lightblue;" onclick="AssignSerNo(event)" onmousemove="hoverText(event)" >
+		</canvas>
+		<script>
+		//alert("Please refresh the Page!");
+			var place;
+			
+    				var c = document.getElementById("myCanvas");
+    				var ctx = c.getContext("2d");
+   //--------------------------------Image Positioning-----------------------------------
+				IndImage=new Image();
+				dot=new Image();
+				IndImage.src='002.gif';
+				dot.src='dot.png';
+
+     				ctx.drawImage(IndImage, 0, 0,800,750);
+				ctx.drawImage(dot,336,595,13,13);//madras
+				ctx.drawImage(dot,300,599,13,13);//Kanchi
+				ctx.drawImage(dot,230,635,13,13);//calicut
+				ctx.drawImage(dot,270,615,13,13);//mysore
+				ctx.drawImage(dot,260,525,13,13);//hampi
+				ctx.drawImage(dot,280,665,13,13);//madurai
+				ctx.drawImage(dot,150,465,13,13);//mumbai
+				ctx.drawImage(dot,220,490,13,13);//vatapi
+				ctx.drawImage(dot,220,350,13,13);//ujjain
+				ctx.drawImage(dot,350,525,13,13);//machchalipatnam
+				ctx.drawImage(dot,480,350,13,13);//Pataliputra
+				ctx.drawImage(dot,100,380,13,13);//lothal
+				ctx.drawImage(dot,110,280,13,13);//Jodhpur
+				ctx.drawImage(dot,515,390,13,13);//Plassey
+				ctx.drawImage(dot,270,170,13,13);//Panipat
+				ctx.drawImage(dot,170,160,13,13);//Taxila
+				ctx.drawImage(dot,350,260,13,13);//Mathura
+				ctx.drawImage(dot,400,460,13,13);//Bubaneshwar
+			
+			
+//--------------------------------Getting X and Y Co-ordinates-----------------------------------
+				
+				//X coordinate
+				var x;
+				//Y coordinate
+				var y;	
+				// Array for places
+				var PlacesArray=		["Calicut","Madurai","Mysuru","Kanchi","Madras","Machalipattanam","Hampi","Vatapi","Bombay","Lothal","Ujjain","Jodhpur","Bhubaneshwar","Plassey","Pataliputra","Mathura","Panipat","Taxila"];
+
+				/*function getPosition(event)
+				{
+					var canvas = document.getElementById("myCanvas");
+					
+			  		x = event.clientX - 300;
+			  		y = event.clientY - 50;
+			  		
+					//alert("X: "+x+" Y: "+y);
+					AssignSerNo();					
+					//alert(AssignSerNo()+"," +PlacesArray[AssignSerNo()]);
+			  
+				}*/
+				function hoverText(event)
+				{		
+					var h = document.getElementById("city");
+
+					x= event.clientX - 300;
+			  		y = event.clientY - 50;
+
+					if(((x>=225)&&(x<=255))&&((y>=630)&&(y<=660)))
+					{
+							h.innerHTML = "Calicut";
+
+					}
+					else if(((x>=280)&&(x<=310))&&((y>=660)&&(y<=690)))
+					{
+							h.innerHTML = "Madurai";
+					}
+		
+		
+					else if(((x>=265)&&(x<=290))&&((y>=610)&&(y<=640)))
+					{
+							h.innerHTML = "Mysuru";
+					}
+		
+		
+					else if(((x>=330)&&(x<=360))&&((y>=590)&&(y<=620)))
+					{
+							h.innerHTML = "Madras";
+					}
+		
+		
+					else if(((x>=300)&&(x<=330))&&((y>=590)&&(y<=620)))
+					{
+							h.innerHTML = "Kanchi";
+					}
+		
+					else if(((x>=350)&&(x<=380))&&((y>=520)&&(y<=550)))
+					{
+							h.innerHTML = "Machalipattanam";
+					}
+		
+					else if(((x>=260)&&(x<=290))&&((y>=520)&&(y<=550)))
+					{
+							h.innerHTML = "Hampi";
+					}
+		
+					else if(((x>=215)&&(x<=245))&&((y>=485)&&(y<=515)))
+					{
+							h.innerHTML = "Vatapi";
+					}
+		
+					else if(((x>=145)&&(x<=175))&&((y>=455)&&(y<=485)))
+					{
+							h.innerHTML = "Bombay";
+					}
+		
+					else if(((x>=95)&&(x<=125))&&((y>=370)&&(y<=400)))
+					{
+							h.innerHTML = "Lothal";
+					}
+		
+					else if(((x>=215)&&(x<=235))&&((y>=340)&&(y<=370)))
+					{
+							h.innerHTML = "Ujjain";
+					}
+		
+					else if(((x>=105)&&(x<=135))&&((y>=270)&&(y<=300)))
+					{
+							h.innerHTML = "Jodhpur";
+					}
+		
+					else if(((x>=395)&&(x<=425))&&((y>=450)&&(y<=480)))
+					{
+							h.innerHTML = "Bhubaneshwar";
+					}
+		
+					else if(((x>=510)&&(x<=540))&&((y>=380)&&(y<=410)))
+					{
+							h.innerHTML = "Plassey";
+					}
+		
+					else if(((x>=475)&&(x<=505))&&((y>=340)&&(y<=370)))
+					{
+							h.innerHTML = "Pataliputra";
+					}
+		
+					else if(((x>=345)&&(x<=375))&&((y>=250)&&(y<=280)))
+					{
+							h.innerHTML = "Mathura";
+					}
+		
+					else if(((x>=265)&&(x<=300))&&((y>=160)&&(y<=190)))
+					{
+							h.innerHTML = "Panipat";
+					}
+					else if(((x>=165)&&(x<=200))&&((y>=150)&&(y<=180)))
+					{
+							h.innerHTML = "Taxila";
+					}
+					else{
+
+						h.innerHTML = "Select City";
+					}
+				}
+			
+				function AssignSerNo(event)
+				{		
+					var plceNo;
+			
+					x = event.clientX - 300;
+			  		y = event.clientY - 50;
+					if(((x>=225)&&(x<=255))&&((y>=630)&&(y<=660)))
+					{
+							placeNo=PlacesArray.indexOf("Calicut");
+
+					}
+					else if(((x>=280)&&(x<=310))&&((y>=660)&&(y<=690)))
+					{
+							placeNo=PlacesArray.indexOf("Madurai");
+					}
+		
+		
+					else if(((x>=265)&&(x<=290))&&((y>=610)&&(y<=640)))
+					{
+							placeNo=PlacesArray.indexOf("Mysuru");
+					}
+		
+		
+					else if(((x>=330)&&(x<=360))&&((y>=590)&&(y<=620)))
+					{
+							placeNo=PlacesArray.indexOf("Madras");
+					}
+		
+		
+					else if(((x>=300)&&(x<=330))&&((y>=590)&&(y<=620)))
+					{
+							placeNo=PlacesArray.indexOf("Kanchi");
+					}
+		
+					else if(((x>=350)&&(x<=380))&&((y>=520)&&(y<=550)))
+					{
+							placeNo=PlacesArray.indexOf("Machalipattanam");
+					}
+		
+					else if(((x>=260)&&(x<=290))&&((y>=520)&&(y<=550)))
+					{
+							placeNo=PlacesArray.indexOf("Hampi");
+					}
+		
+					else if(((x>=215)&&(x<=245))&&((y>=485)&&(y<=515)))
+					{
+							placeNo=PlacesArray.indexOf("Vatapi");
+					}
+		
+					else if(((x>=145)&&(x<=175))&&((y>=455)&&(y<=485)))
+					{
+							placeNo=PlacesArray.indexOf("Bombay");
+					}
+		
+					else if(((x>=95)&&(x<=125))&&((y>=370)&&(y<=400)))
+					{
+							placeNo=PlacesArray.indexOf("Lothal");
+					}
+		
+					else if(((x>=215)&&(x<=235))&&((y>=340)&&(y<=370)))
+					{
+							placeNo=PlacesArray.indexOf("Ujjain");
+					}
+		
+					else if(((x>=105)&&(x<=135))&&((y>=270)&&(y<=300)))
+					{
+							placeNo=PlacesArray.indexOf("Jodhpur");
+					}
+		
+					else if(((x>=395)&&(x<=425))&&((y>=450)&&(y<=480)))
+					{
+							placeNo=PlacesArray.indexOf("Bhubaneshwar");
+					}
+		
+					else if(((x>=510)&&(x<=540))&&((y>=380)&&(y<=410)))
+					{
+							placeNo=PlacesArray.indexOf("Plassey");
+					}
+		
+					else if(((x>=475)&&(x<=505))&&((y>=340)&&(y<=370)))
+					{
+							placeNo=PlacesArray.indexOf("Pataliputra");
+					}
+		
+					else if(((x>=345)&&(x<=375))&&((y>=250)&&(y<=280)))
+					{
+							placeNo=PlacesArray.indexOf("Mathura");
+					}
+		
+					else if(((x>=265)&&(x<=300))&&((y>=160)&&(y<=190)))
+					{
+							placeNo=PlacesArray.indexOf("Panipat");
+					}
+					else if(((x>=165)&&(x<=200))&&((y>=150)&&(y<=180)))
+					{
+							placeNo=PlacesArray.indexOf("Taxila");
+					}
+					else
+					{
+					var placeNo=-1;	
+					}
+					
+					if(placeNo==-1){
+					  alert("Please click on a valid City point on the Map or Please Ensure that  Browser is in Full Screen Mode !");
+					 }
+					else{
+						//closeCurrentWindow;
+						window.open("oneCity.html");
+						
+					}
+		
+					localStorage.setItem('IndexNo2',PlacesArray[placeNo]);
+					localStorage.setItem('IndexNo1', placeNo);
+					//alert(localStorage.getItem('IndexNo2'));
+					//window.Append("window.close();")
+					/*function closeCurrentWindow()
+					{
+					  window.close();
+					}*/
+					return placeNo;
+			
+				}					
+			
+			
+			
+			
+			
+
+</script>
+</body>
+</html>
+
